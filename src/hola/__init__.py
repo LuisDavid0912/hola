@@ -1,9 +1,11 @@
 def main() -> None:
-    try:
-        edad = int(input('¿Cuántos años tienes? '))
-    except ValueError:
-        print('Eso eno es un numero valido')
-        return
+    while True:
+        try:
+            edad = int(input('¿Cuántos años tienes? '))
+            break
+        except ValueError:
+            print('Eso no es un número valido, intenta de nuevo')
+           
 
     tiene_id = True
 
@@ -11,6 +13,7 @@ def main() -> None:
         print('Acceso denegado')
     else:
         print('bienvenido')
+
 
 
 
